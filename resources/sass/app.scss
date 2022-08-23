@@ -6,3 +6,15 @@
 
 // Bootstrap
 @import 'bootstrap/scss/bootstrap';
+
+.controls {
+    display: flex;
+    column-gap: 5px;
+    align-items: center;
+    margin-left: 5px;
+    justify-content: center;
+}
+
+body {
+    background-color:indigo;
+}

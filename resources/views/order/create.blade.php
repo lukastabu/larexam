@@ -11,12 +11,12 @@
                         <div class="">
                             <h3>{{ $item->name }}</h3>
                             <span><img src="{{ $item->photo }}"></span>
-                            <input type="hidden" name="item_id" value={{ $item->id }}>
+                            <input type="hidden" name="item_id" value={{ $item->id }} required>
                             <br>
                             <span>Ordering from: {{ $item->item_group->group_restaurant->title }}</span>
-                            <input type="hidden" name="restaurant_id" value={{ $item->item_group->group_restaurant->id }}>
+                            <input type="hidden" name="restaurant_id" value={{ $item->item_group->group_restaurant->id }} required>
                             <br>
-                            <span>Quantity: <input type="text" name="quantity" value=1>
+                            <span>Quantity: <input type="text" name="quantity" value=1 required>
                         </div>
                             <br><br>
                             @csrf

@@ -8,7 +8,7 @@
 
                     <div class="card-body list-group">
                         <form method="POST" action="{{ route('group-store') }}">
-                            <li class="list-group-item">Menu name: <input type="text" name="menu"></li>
+                            <li class="list-group-item">Menu name: <input type="text" name="menu" required></li>
                             <li class="list-group-item">Menu belongs to this Restaurant:
                                 <select name="restaurant_id">
                                     @foreach ($restaurants as $restaurant)

@@ -9,11 +9,11 @@
 
                     <div class="card-body">
                         <form action="{{ route('restaurant-update', $restaurant) }}" method="POST">
-                            Restaurant : <input type="text" name="title" value={{ $restaurant->title }}>
+                            Restaurant : <input type="text" name="title" value={{ $restaurant->title }} required>
                             <br>
-                            Restaurant code: <input type="text" name="city" value={{ $restaurant->code }}>
+                            Restaurant code: <input type="text" name="city" value={{ $restaurant->code }} required>
                             <br>
-                            Address: <input type="text" name="address" value={{ $restaurant->address }}>
+                            Address: <input type="text" name="address" value={{ $restaurant->address }} required>
                             <br><br>
                             @csrf
                             @method('put')

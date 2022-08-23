@@ -17,7 +17,11 @@
                                     Address: <span>{{ $restaurant->address }}</span>
                                 </div>
                             </li>
-                            <a class="btn btn-outline-primary controls mb-5" href="{{ route('front-show', $restaurant->id) }}">See Menu of this Restaurant</a>
+                            <div class="controls">
+                                <a class="btn btn-outline-primary mb-5" href="{{ route('front-show', $restaurant->id) }}">See
+                                    Menu of this Restaurant</a>
+                            </div>
+
                         @empty
                             <li class="list-group-item">Nothing to show :/</li>
                         @endforelse

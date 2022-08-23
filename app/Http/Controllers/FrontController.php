@@ -12,6 +12,15 @@ class FrontController extends Controller
 {
     public function index(Request $request)
     {
+        // 'restaurant-asc' => [DB::table('restaurants')
+        // ->select('restaurants.*')
+        // ->orderBy('restaurants.title', 'asc')
+        // ->get(),
+        // 'restaurant-desc' => [DB::table('restaurants')
+        // ->select('restaurants.*')
+        // ->orderBy('restaurants.title', 'asc')
+        // ->get()],
+
         $restaurants = Restaurant::all();
         
         return view('front.index', ['restaurants' => $restaurants]);

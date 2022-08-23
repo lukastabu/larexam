@@ -9,7 +9,7 @@
                     <div class="card-body list-group">
                         <form action="{{ route('group-update', $group) }}" method="POST">
                             <li class="list-group-item">Menu name: <input type="text" name="name"
-                                    value={{ $group->menu }}></li>
+                                    value={{ $group->menu }} required></li>
                             <li class="list-group-item">To which Restaurant belongs:
                                 <select name="restaurant_id">
                                     @foreach ($restaurants as $restaurant)

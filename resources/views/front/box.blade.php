@@ -12,18 +12,18 @@
                             <option value="default" @if ($sort == 'default') selected @endif>Recommended</option>
                             <option value="item-asc" @if ($sort == 'item-asc') selected @endif>Items A-Z</option>
                             <option value="item-desc" @if ($sort == 'item-desc') selected @endif>Items Z-A</option>
-                            <option value="group-asc" @if ($sort == 'group-asc') selected @endif>Group A-Z</option>
-                            <option value="group-desc" @if ($sort == 'group-desc') selected @endif>Group Z-A</option>
+                            <option value="group-asc" @if ($sort == 'group-asc') selected @endif>Menu A-Z</option>
+                            <option value="group-desc" @if ($sort == 'group-desc') selected @endif>Menu Z-A</option>
                             <option value="restaurant-asc" @if ($sort == 'restaurant-asc') selected @endif>Restaurant A-Z</option>
                             <option value="restaurant-desc" @if ($sort == 'restaurant-desc') selected @endif>Restaurant Z-A</option>
                         </select>
                         <button class="btn btn-outline-info ml-1" type="submit">Sort</button>
                         <div>
                             <select name="group_id">
-                                <option value="0" @if ($filter == 0) selected @endif>All Groups</option>
-                                @foreach ($groups as $group)
-                                    <option value="{{ $group->id }}"
-                                        @if ($filter == $group->id) selected @endif>{{ $group->title }}</option>
+                                <option value="0" @if ($filter == 0) selected @endif>All Restaurants</option>
+                                @foreach ($restaurants as $restaurant)
+                                    <option value="{{ $restaurant->id }}"
+                                        @if ($filter == $restaurant->id) selected @endif>{{ $restaurant->title }}</option>
                                 @endforeach
                             </select>
                             <button class="btn btn-outline-success" type="submit">Filter</button>

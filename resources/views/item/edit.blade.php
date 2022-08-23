@@ -8,9 +8,9 @@
 
                     <div class="card-body list-group">
                         <form action="{{ route('item-update', $item) }}" method="POST">
-                            <li class="list-group-item">Dish name: <input type="text" name="name" value={{ $item->name }}></li>
-                            <li class="list-group-item">Dish description: <input type="text" name="description" value={{ $item->description }}></li>
-                            <li class="list-group-item">Link to picture: <input type="text" name="photo" value={{ $item->photo }}></li>
+                            <li class="list-group-item">Dish name: <input type="text" name="name" value={{ $item->name }} required></li>
+                            <li class="list-group-item">Dish description: <input type="text" name="description" value={{ $item->description }} required></li>
+                            <li class="list-group-item">Link to picture: <input type="text" name="photo" value={{ $item->photo }} required></li>
                             <li class="list-group-item">In which Menu found:
                                 <select name="group_id">
                                     @foreach ($groups as $group)
